@@ -3,6 +3,7 @@ Linux System Administrator/DevOp Interview Questions
 
 A collection of linux sysadmin/devop interview questions. Feel free to contribute via pull requests, issues or email messages.
 
+This originated from /chassing. Adding as much as much as I can to it.
 
 ## <a name='toc'>Table of Contents</a>
 
@@ -72,12 +73,28 @@ The majority of the questions were collected from:
 * How to add/remove a group from a user?
 * What is a bash alias?
 * How do you set the mail address of the root/a user?
-* What does CTRL-c do?
+* What does CTRL-c do? What signal does it send.
 * What is in /etc/services?
 * How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
 * What is the difference between UNIX and Linux
 * What is the difference between Telnet and SSH?
 * Explain the three load averages and what do they indicate
+
+##### [ghavil](https://github.com/jfledvin) additions (filtered to not be too repetitive with above)
+
+* You are adding a brand new hard drive to the second SATA port of a server. Explain how you go about this.
+* You have console on a linux box. After running `ifconfig` you only see the loop back network interface. What do you do to get this machine back online? Situation: Physical box in datacenter with cable plugged in.
+* You’re trying to run some application, but it keeps failing to start due to an inability to open the necessary port it wants to listen on.  You run ```netstat -an | grep LISTEN | grep <portnum>```, but don’t see anything listening on that port.  What could be going on here?
+* You backup your logs and use logrotate to compress and archive all old logs. You need to examine a log, two months old. What would you suggest without decompressing the compressed file?
+* How do you see the permissions on a file or directory?
+* How would you set the permissions on the file secure.txt so that the owner can read and write but the group and others can’t read, write or execute?
+* What is RAID (stand for)/How does RAID work on a basic level? 
+* Briefly explain RAID0/1/5/6/10, how much space is usable compared to total, reliability, performance.
+* What happens when you telnet to foobar.com on port 80?
+* How does a URL translate to an IP?
+* Ports that are used for: HTTP(s), DNS, SSH, Telnet, BGP, LDAP, LDAPS, IRC/IRCS, SNMP, IMAP, SMTP 
+* What is an ephemeral port? What are they used for?
+* Describe the Linux run levels. How would you change the default run level? 
 
 
 ####[[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
@@ -114,6 +131,21 @@ The majority of the questions were collected from:
 * What happens to a child process that dies and has no parent process to wait for it and what’s bad about this?
 * How to know which process listens on a specific port?
 
+##### [ghavil](https://github.com/jfledvin) additions (filtered to not be too repetitive with above)
+
+* What does kill do?
+* What are the different Linux boot levels?
+* How would you remove all ```*.pyc``` files from a directory, recursively?
+* You're cleaning up your computer and have a junk drop folder…full of tons of various files. How would you grab only the files modified within the last 15 days?
+* Describe (don't need exact commands/lines) how you'd configure a white-list iptables setup in front of an FTP server. Hint: there are two answers.
+* How do you change how often a file system check is run at boot time? 
+* What are the steps to add a user to a system without using useradd/adduser?
+* How would you send a test email via command line?
+* What 'masquerade' means in context of iptables
+* What would the output of the following look like?
+```"date; ps aux | awk `{print $1}' | sort | uniq | wc -l" >> output.log```
+* So after fixing an out of control application earlier in the day, you notice that your server’s partition is filling up.  After poking around you see that the angry application from earlier has naturally flooded its log for today with error messages, which has almost filled the partition.  Hurray, more cleanup!  You check your log aggregation system (Splunk/Logstash/whatever) and confirm that all logs are up to date, so you wipe out today’s log with an rm.  You come back 10 minutes later and notice that, while the log file is gone, disk space hasn’t recovered!  What’s going on here?
+
 
 ####[[⬆]](#toc) <a name='hard'>Hard Linux Questions:</a>
 
@@ -135,6 +167,11 @@ The majority of the questions were collected from:
 * When trying to umount a directory it says it's busy, how to find out which PID holds the directory?
 * What's LD_PRELOAD and when it's used?
 * You run a binary and nothing happens, how do you debug what's doing?
+
+##### [ghavil](https://github.com/jfledvin) additions (filtered to not be too repetitive with above)
+
+* What is PID 0?
+* On a RHEL/Centos 6.5 box, how would you configure rsyncd to run as a service and listen on a specific port of your choosing?
 
 
 ####[[⬆]](#toc) <a name='expert'>Expert Linux Questions:</a>
@@ -158,6 +195,14 @@ The majority of the questions were collected from:
 * When a client running a web browser connects to a web server, what is the source port and what is the destination port of the connection?
 * How do you add an IPv6 address to a specific interface?
 * You have added an IPv4 and IPv6 address to interface eth0. A ping to the v4 address is working but a ping to the v6 address gives yout the response ```sendmsg: operation not permitted```. What could be wrong?
+
+##### [ghavil](https://github.com/jfledvin) additions (filtered to not be too repetitive with above)
+
+* What is the TCP handshake?
+* Can you block pings by blocking a What ISO network layer does ICMP run on? 
+* Please give me an example of a device that operates primarily at each of the first three layers of the OSI networking model.
+* How do you prevent your organization’s users from bypassing your organization’s DNS servers? (I.e. You want to force your users to only use the company DNS servers
+* Draw a picture of a network infrastructure that could support blank (maybe a small office of 50 people, maybe a grocery store, etc..).
 
 
 ####[[⬆]](#toc) <a name='devop'>DevOp Questions:</a>
