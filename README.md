@@ -3,7 +3,7 @@ Linux System Administrator/DevOp Interview Questions
 
 A collection of linux sysadmin/devop interview questions. Feel free to contribute via pull requests, issues or email messages.
 
-This originated from /chassing. Adding as much as much as I can to it.
+##### This originated from /chassing. Adding as much as much as I can to it.
 
 ## <a name='toc'>Table of Contents</a>
 
@@ -14,6 +14,7 @@ This originated from /chassing. Adding as much as much as I can to it.
   1. [Hard Linux Questions](#hard)
   1. [Expert Linux Questions](#expert)
   1. [Networking Questions](#network)
+  1. [General Front-end Questions](#web)
   1. [DevOp Questions](#devop)
   1. [Fun Questions](#fun)
   1. [Demo Time](#demo)
@@ -204,6 +205,18 @@ The majority of the questions were collected from:
 * How do you prevent your organization’s users from bypassing your organization’s DNS servers? (I.e. You want to force your users to only use the company DNS servers
 * Draw a picture of a network infrastructure that could support blank (maybe a small office of 50 people, maybe a grocery store, etc..).
 
+####[[⬆]](#toc) <a name='web'>Front-end Questions:</a>
+
+* What differences exist between HTTP/1.0 and 1.1
+* Define HTTP GET vs. POST requests. Why would you use one over the other?
+* What is the difference b/w static and dynamic site content? Examples?
+* What is a CDN and what kind of content would it contain?
+* Do you know what Cloudflare is? If so, describe in latence terms how their anycast system works to provide the content from the closeest possible location to a client.
+* Why might it help to serve content from multiple domains?
+* Why would it be advantageous to utilize a jquery link via Google.com on in your source code rather than hosting it yourself?
+* How can you monitor or watch the number of connections to a site served via Apache or nginx?
+* What is minification and how can it help page load times from a client's browser?
+* Explain how a browser gets a webpage from a server. (gets html and builds from there)
 
 ####[[⬆]](#toc) <a name='devop'>DevOp Questions:</a>
 
